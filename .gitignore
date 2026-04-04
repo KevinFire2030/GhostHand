@@ -9,6 +9,7 @@ local.properties
 # Termux / temp
 *.log
 *.tmp
+.env
 
 # OS/editor
 .DS_Store
