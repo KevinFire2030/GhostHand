@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Android local config
+local.properties
+
+# Termux / temp
+*.log
+*.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
