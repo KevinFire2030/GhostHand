@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1500" viewBox="0 0 900 1500">
+  <defs>
+    <style>
+      .box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12;ry:12}
+      .diamond{fill:#fff7ed;stroke:#9a3412;stroke-width:2}
+      .txt{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:22px;fill:#0f172a}
+      .title{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:28px;font-weight:bold;fill:#0f172a}
+      .line{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .label{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:18px;fill:#7c2d12}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker>
+  </defs>
+  <text x="40" y="45" class="title">도면 2. 기본 동작 순서도</text>
+  <rect x="250" y="80" width="400" height="80" class="box"/><text x="340" y="128" class="txt">S100 사용자 명령 수신</text>
+  <rect x="210" y="220" width="480" height="80" class="box"/><text x="240" y="268" class="txt">S200 자연어 명령 해석 및 실행 파라미터 추출</text>
+  <rect x="220" y="360" width="460" height="80" class="box"/><text x="260" y="408" class="txt">S300 자기 단말 식별 및 단말 상태 확인</text>
+  <rect x="220" y="500" width="460" height="80" class="box"/><text x="250" y="548" class="txt">S400 정책 판단 및 민감 작업 여부 판정</text>
+  <rect x="270" y="640" width="360" height="80" class="box"/><text x="355" y="688" class="txt">S500 실행 경로 선택</text>
+  <rect x="290" y="780" width="320" height="80" class="box"/><text x="355" y="828" class="txt">S600 단말 제어 수행</text>
+  <rect x="280" y="920" width="340" height="80" class="box"/><text x="335" y="968" class="txt">S700 실행 결과 검증</text>
+  <polygon points="450,1060 610,1160 450,1260 290,1160" class="diamond"/>
+  <text x="365" y="1170" class="txt">S800 실패 여부 판단</text>
+  <rect x="120" y="1320" width="320" height="90" class="box"/><text x="145" y="1372" class="txt">S900 실패 시 대체 경로 선택 및 재시도</text>
+  <rect x="500" y="1320" width="280" height="90" class="box"/><text x="535" y="1372" class="txt">S1000 결과 피드백 제공</text>
+  <line x1="450" y1="160" x2="450" y2="220" class="line"/>
+  <line x1="450" y1="300" x2="450" y2="360" class="line"/>
+  <line x1="450" y1="440" x2="450" y2="500" class="line"/>
+  <line x1="450" y1="580" x2="450" y2="640" class="line"/>
+  <line x1="450" y1="720" x2="450" y2="780" class="line"/>
+  <line x1="450" y1="860" x2="450" y2="920" class="line"/>
+  <line x1="450" y1="1000" x2="450" y2="1060" class="line"/>
+  <line x1="290" y1="1160" x2="280" y2="1320" class="line"/>
+  <text x="240" y="1240" class="label">실패</text>
+  <line x1="610" y1="1160" x2="640" y2="1320" class="line"/>
+  <text x="620" y="1240" class="label">성공</text>
+  <path d="M280,1320 C80,1320 80,680 270,680" class="line"/>
+</svg>

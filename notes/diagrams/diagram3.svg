@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="1500" viewBox="0 0 980 1500">
+  <defs><style>.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12;ry:12}.diamond{fill:#fff7ed;stroke:#9a3412;stroke-width:2}.txt{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:22px;fill:#0f172a}.title{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:28px;font-weight:bold;fill:#0f172a}.line{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#arrow)}.label{font-family:Arial, 'Noto Sans KR', sans-serif;font-size:18px;fill:#7c2d12}</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+  <text x="40" y="45" class="title">도면 3. 민감 작업 사용자 확인 흐름도</text>
+  <rect x="270" y="80" width="440" height="80" class="box"/><text x="325" y="128" class="txt">사용자 자연어 명령 수신</text>
+  <rect x="230" y="220" width="520" height="80" class="box"/><text x="260" y="268" class="txt">자연어 해석 및 의도/파라미터 추출</text>
+  <rect x="220" y="360" width="540" height="80" class="box"/><text x="250" y="408" class="txt">정책 판단부에서 민감 작업 여부 판정</text>
+  <polygon points="490,500 680,610 490,720 300,610" class="diamond"/><text x="400" y="620" class="txt">민감 작업인가?</text>
+  <rect x="80" y="800" width="280" height="80" class="box"/><text x="120" y="848" class="txt">일반 작업으로 분류</text>
+  <rect x="560" y="800" width="280" height="80" class="box"/><text x="620" y="848" class="txt">사용자 확인 요청</text>
+  <rect x="510" y="950" width="380" height="80" class="box"/><text x="540" y="998" class="txt">비밀번호/패턴/생체인식 인증</text>
+  <polygon points="700,1090 860,1190 700,1290 540,1190" class="diamond"/><text x="605" y="1200" class="txt">사용자 확인 성공 여부</text>
+  <rect x="120" y="1110" width="280" height="80" class="box"/><text x="180" y="1158" class="txt">실행 경로 선택</text>
+  <rect x="120" y="1260" width="280" height="80" class="box"/><text x="180" y="1308" class="txt">단말 제어 수행</text>
+  <rect x="120" y="1410" width="280" height="70" class="box"/><text x="185" y="1453" class="txt">결과 검증</text>
+  <rect x="560" y="1380" width="280" height="90" class="box"/><text x="585" y="1434" class="txt">실행 중단 및 실패 피드백</text>
+  <line x1="490" y1="160" x2="490" y2="220" class="line"/>
+  <line x1="490" y1="300" x2="490" y2="360" class="line"/>
+  <line x1="490" y1="440" x2="490" y2="500" class="line"/>
+  <line x1="300" y1="610" x2="220" y2="800" class="line"/>
+  <text x="205" y="720" class="label">아니오</text>
+  <line x1="680" y1="610" x2="700" y2="800" class="line"/>
+  <text x="690" y="720" class="label">예</text>
+  <line x1="220" y1="880" x2="260" y2="1110" class="line"/>
+  <line x1="700" y1="880" x2="700" y2="950" class="line"/>
+  <line x1="700" y1="1030" x2="700" y2="1090" class="line"/>
+  <line x1="540" y1="1190" x2="400" y2="1150" class="line"/>
+  <text x="520" y="1160" class="label">성공</text>
+  <line x1="700" y1="1290" x2="700" y2="1380" class="line"/>
+  <text x="720" y="1340" class="label">실패</text>
+  <line x1="260" y1="1190" x2="260" y2="1260" class="line"/>
+  <line x1="260" y1="1340" x2="260" y2="1410" class="line"/>
+</svg>
