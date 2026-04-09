@@ -15,7 +15,12 @@
   - "단말 안에 다 들어 있네" 인상 강조형
   - 핵심 메시지: 단말 하나로 구성되는 자기제어 구조
 
+- `architecture-comparison-v4.md`
+  - 선행기술의 외부 PC/연결 모듈이 줄어들거나 제거된다는 점 강조형
+  - 핵심 메시지: 외부 의존 구조가 단말 내부 일체형 구조로 축소/통합됨
+
 ## 추천
-- 문서 본문 삽입용 1순위: `architecture-comparison-v3.md`
-- 기술 설명 보강용 2순위: `architecture-comparison-v2.md`
+- 문서 본문 삽입용 1순위: `architecture-comparison-v4.md`
+- 직관성 기준 차선책: `architecture-comparison-v3.md`
+- 기술 설명 보강용: `architecture-comparison-v2.md`
 - 가장 단순한 비교 표기용: `architecture-comparison-v1.md`
