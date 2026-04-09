@@ -1,5 +1,7 @@
 # GhostHand
 
+**AI-powered invisible hand on your phone**
+
 **GhostHand** is an experimental on-device AI control system for Android.
 
 It explores a simple but powerful idea:
