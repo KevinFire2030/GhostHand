@@ -6,7 +6,7 @@
 ## 2. 메시지 입력 시나리오
 
 ### 1. 작업 폴더 생성
-`examples/Demo2` 폴더 아래에 `UT` 폴더를 생성한다.  
+`examples/Demo2` 폴더 아래에 `UT` 폴더를 생성한다.
 필요 시 아래 하위 폴더도 함께 생성하고 GitHub에 푸시한다.
 
 - `UT/screencapture`
