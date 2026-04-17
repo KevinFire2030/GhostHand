@@ -1,3 +1,7 @@
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/93495630-a02a-4385-9e92-dc00c7516571" />
+
+
 # 내 스마트폰에서 돌아가는 AI 비서
 
 부제: **OpenClaw 기반 모바일 에이전트 플랫폼 구축과 AX 실전**
