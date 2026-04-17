@@ -7,6 +7,28 @@
 - 단말과 PLM 시스템은 서로 다른 네트워크를 사용함
 - iPaaS(Integration Platform as a Service)를 통해 단말에서 PLM API로 문제점 및 로그 파일 업로드 예정
 
+## API-iPaaS Mapping
+
+| No. | API Name | App Id | Service Code | iPaaS | 비고 |
+|---|---|---|---|---|---|
+| 1 | Defect registration | Mandatory | IF_OUTER_TO_PLM_DEFECT | plm_tqmdefectreg |  |
+| 2 | Reject resolution |  | IF_OUTER_TO_PLM_DEFECT | plm_tqmdefectrej |  |
+| 3 | Resolve defect |  | IF_OUTER_TO_PLM_DEFECT_SOL |  |  |
+| 4 | Close defect |  | IF_OUTER_TO_PLM_DEFECT | plm_tqmdefectclose |  |
+| 5 | Comment registration |  | IF_OUTER_TO_PLM_DEFECT_CMT | plm_tqmdefectcomment |  |
+| 6 | Defect Info |  | plm.tqm.plmif.getWlPlmDefectInfoIf | plm_tqmdefectinfo |  |
+| 7 | Defect List by main owner |  | plm.tqm.plmif.getDefectByOwnerIf | plm_tqmdefectbyowner |  |
+| 8 | Defect history |  | plm.tqm.plmif.getWlPlmDefectHistoryIf | plm_tqmdefecthistory |  |
+| 9 | Cancel defect |  | IF_OUTER_TO_PLM_DEFECT_CANCEL | plm_tqmdefectcancel |  |
+| 10 | Reassign main owner of defect |  | REASSIGN_PLM_DEFECT_CHARGER | plm_tqmdefectreassign |  |
+| 11 | Get file list from defect |  | GET_DOC_LIST | plm_tqmdefectdocinfo | 기술자료모듈 API |
+| 12 | File download from defect |  | GET_FILE |  |  |
+| 13 | File Upload to defect |  | CREATE_FILE |  |  |
+| 14 | Get sub folder list from dev. Model |  | plm.tqm.plmif.getDevModelTestEtcInfo |  |  |
+| 15 | Defect Draft to Open |  | IF_OUTER_TO_PLM_DEFECT |  |  |
+| 16 | Update Create User |  | IF_OUTER_TO_PLM_DEFECT |  |  |
+| 17 | Get Defect code list |  | GET_DEFECT_CODE |  |  |
+
 ## Defect Registration (Request) / POST
 
 | No. | Properties | Parameter Name | Data Type | Comments | MX |
