@@ -1,0 +1,6 @@
+{
+  "scenarioId": "UT-003_chrome_weather",
+  "scenarioName": "크롬 앱 실행 - 네이버 이동 - 수원 날씨 검색 - 홈으로 이동",
+  "deviceSerial": "10.247.92.78:41679",
+  "startTime": "2026-04-18T09:53:14+0900"
+}

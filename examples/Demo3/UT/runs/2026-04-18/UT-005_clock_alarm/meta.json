@@ -1,0 +1,6 @@
+{
+  "scenarioId": "UT-005_clock_alarm",
+  "scenarioName": "시계 앱 실행 - 07:00 알람 설정 - 알람 해제 - 홈으로 이동",
+  "deviceSerial": "10.247.92.78:41679",
+  "startTime": "2026-04-18T09:53:49+0900"
+}
