@@ -9,3 +9,6 @@
 따라서 중복 이슈를 줄이기 위해 공통 환경 이슈 1건으로 관리합니다.
 
 - GitHub Issue: https://github.com/KevinFire2030/GhostHand/issues/13
+
+## GitHub issue
+- Shared blocker issue: https://github.com/KevinFire2030/GhostHand/issues/13

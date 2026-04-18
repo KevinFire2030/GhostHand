@@ -1,11 +1,32 @@
-# 이슈 초안 - TC-02
+# Issue draft for TC-02
 
-- 공통 이슈로 묶음 예정
-- 제목: [Demo3][UT] 2026-04-19 기본 UT 실행 차단 - ADB 단말/에뮬레이터 미연결
-- 분류: DEVICE_ENV
-- 담당자: 홍길동
+## Suggested title
+[Demo3][UT][TC-02] Validation blocked - no ADB device connected
 
-본 TC는 개별 기능 결함이 아니라 시험 환경 차단으로 실패했습니다.
-따라서 중복 이슈를 줄이기 위해 공통 환경 이슈 1건으로 관리합니다.
+## Summary
+Demo3 basic UT validation could not execute because no Android device/emulator was detected by ADB during preflight.
 
-- GitHub Issue: https://github.com/KevinFire2030/GhostHand/issues/13
+## Impacted test case
+- TC-02 - 문자 보내기 - 홈으로 이동
+
+## Reproduction / execution path
+1. Start Demo3 basic UT validation workflow.
+2. Run List of devices attached before scenario execution.
+3. Observe that no device is listed.
+4. Attempt to start scenario execution.
+5. Execution is blocked before app launch / capture begins.
+
+## Fail reason
+- Environment blocker: no ADB-connected device available.
+
+## First-pass analysis
+- Classification: DEVICE_ENV
+- Owner org: 시험 환경/검증 운영
+- Owner: 홍길동
+- Evidence file: 
+
+## Artifact path
+- 
+
+## GitHub issue
+- Shared blocker issue: https://github.com/KevinFire2030/GhostHand/issues/13

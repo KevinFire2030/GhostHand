@@ -21,8 +21,5 @@
     "notes": "테스트 시작 전 환경 점검 단계에서 차단되어 실제 앱 조작/화면 녹화/스크린샷 수집 불가"
   },
   "issue_strategy": "common-environment-issue",
-  "github_issue": {
-    "number": 13,
-    "url": "https://github.com/KevinFire2030/GhostHand/issues/13"
-  }
+  "github_issue": "https://github.com/KevinFire2030/GhostHand/issues/13"
 }

@@ -1,7 +1,4 @@
-ADB logcat could not be collected because no device/emulator was connected.
-
-error: no devices/emulators found
-
-[exit_code]=1
-
+[preflight] adb devices -l
 List of devices attached
+
+[analysis] No device/emulator available, so logcat capture could not start.

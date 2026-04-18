@@ -1,0 +1,8 @@
+Run started: 2026-04-19T04:01:13+09:00
+ADB status:
+List of devices attached
+
+Result: No connected Android device detected.
+Impact: All interactive Demo3 UT cases are blocked at environment setup stage.
+Primary classification: DEVICE_ENV
+Assigned owner: 홍길동 (시험 환경/검증 운영)
