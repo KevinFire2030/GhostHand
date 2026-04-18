@@ -1,0 +1,7 @@
+ADB logcat could not be collected because no device/emulator was connected.
+
+error: no devices/emulators found
+
+[exit_code]=1
+
+List of devices attached

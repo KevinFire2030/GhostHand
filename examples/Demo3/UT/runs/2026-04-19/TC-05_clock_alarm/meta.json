@@ -1,0 +1,28 @@
+{
+  "tc_id": "TC-05",
+  "title": "시계 앱 실행 - 07:00 알람 설정 - 알람 해제 - 홈으로 이동",
+  "status": "FAIL",
+  "classification": "DEVICE_ENV",
+  "owner_org": "시험 환경/검증 운영",
+  "owner": "홍길동",
+  "executed_at": "2026-04-19T02:19:01+09:00",
+  "artifacts": {
+    "screen_mp4": "screen.mp4",
+    "logcat": "logcat.txt",
+    "screenshots_dir": "screenshots/"
+  },
+  "failure_reason": "ADB에 연결된 단말/에뮬레이터가 없어 시나리오 실행 차단",
+  "first_pass_analysis": {
+    "type": "DEVICE_ENV",
+    "keywords": [
+      "no devices/emulators found",
+      "List of devices attached"
+    ],
+    "notes": "테스트 시작 전 환경 점검 단계에서 차단되어 실제 앱 조작/화면 녹화/스크린샷 수집 불가"
+  },
+  "issue_strategy": "common-environment-issue",
+  "github_issue": {
+    "number": 13,
+    "url": "https://github.com/KevinFire2030/GhostHand/issues/13"
+  }
+}

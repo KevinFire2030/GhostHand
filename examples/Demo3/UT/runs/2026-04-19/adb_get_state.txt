@@ -1,0 +1,4 @@
+
+error: no devices/emulators found
+
+[exit_code]=1
