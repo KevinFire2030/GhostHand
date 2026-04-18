@@ -21,3 +21,6 @@
 - `examples/Demo3/UT/runs/2026-04-18/UT-001_call/screen.mp4`
 - `examples/Demo3/UT/runs/2026-04-18/UT-001_call/logcat.txt`
 - `examples/Demo3/UT/runs/2026-04-18/UT-001_call/screenshots/UT-001_call.png`
+
+## GitHub Issue
+- https://github.com/KevinFire2030/GhostHand/issues/10

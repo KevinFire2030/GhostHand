@@ -19,7 +19,12 @@
    - 메시지 입력 단계에서 `adb shell input text` 예외 발생
    - 시계 앱 알람 설정/해제는 현재 단순 입력 방식으로 안정적 검증 어려움
 
+## GitHub Issues
+- UT-001: https://github.com/KevinFire2030/GhostHand/issues/10
+- UT-002: https://github.com/KevinFire2030/GhostHand/issues/11
+- UT-005: https://github.com/KevinFire2030/GhostHand/issues/12
+
 ## 후속 권장 사항
 - 전화/문자 데모는 기본 FAIL 케이스로 활용 가능
 - 메시지/시계 항목은 UIAutomator/좌표/요소 인식 기반 자동화 보강 필요
-- FAIL 항목은 `issue.md` 및 `result.md` 기준으로 GitHub Issues 등록 가능
+- FAIL 항목은 `issue.md` 및 `result.md` 기준으로 후속 추적 가능
