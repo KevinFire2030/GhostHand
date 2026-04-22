@@ -1,7 +1,14 @@
 
 <p align="center">
+  <img width="512" height="768" alt="image" src="https://github.com/user-attachments/assets/8266e316-ee07-4a61-b3ee-e620228bbbee" />
+</p>
+
+
+<!--
+<p align="center">
   <img width="512" height="768" alt="image" src="https://github.com/user-attachments/assets/93495630-a02a-4385-9e92-dc00c7516571" />
 </p>
+-->
 
 
 # 내 스마트폰에서 돌아가는 AI 비서
