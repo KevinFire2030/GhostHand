@@ -164,6 +164,15 @@ AX 뉴스 보고서 초안 생성 GPT
 - `추가 확인 사항과 시사점까지 붙여줘.`
 - `회사/인물 배경 정보를 별첨에 넣어줘.`
 
+
+"애플, 아이폰18 일반모델 사양 낮춘다"…비용 절감 본격화?
+https://zdnet.co.kr/view/?no=20260422075720
+
+애플, 15년 만에 CEO 바뀐다...존 터너스 임명
+https://www.bbc.com/korean/articles/cvg0y3n2e0eo
+
+"구글 기술로 만든 애플 차세대 AI, 올해 말 공개"
+https://www.hankyung.com/article/202604230183i
 ---
 
 ## 5. 한 줄 정리
