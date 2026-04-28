@@ -132,6 +132,38 @@ openclaw dashboard
 - WebUI 접속 후 간단한 메시지 입력
 - 예: `안녕, 잘 들리니?`
 
+## 7. 텔레그램 연결하기
+
+### 7.1 BotFather에서 newbot 생성
+진행 순서:
+- BotFather 열기
+- `/newbot` 입력
+- 봇 이름 입력
+- 봇 ID 입력
+- 발급된 봇 토큰 저장
+
+### 7.2 페어링
+예시:
+
+- Your Telegram user id: `5440299023`
+- Pairing code: `D8VZWJMF`
+
+봇 오너 승인 명령:
+```bash
+openclaw pairing approve telegram D8VZWJMF
+```
+
+복붙용:
+```bash
+openclaw pairing approve telegram D8VZWJMF
+```
+
+### 7.3 연결 확인
+- 텔레그램에서 봇에게 메시지 보내기
+- OpenClaw가 응답하는지 확인
+
+---
+
 ## 8. 스마트폰 무선 연결 실습
 WebUI 대화가 성공했다면,
 이제 OpenClaw 실행 환경과 스마트폰을 연결해서 실습을 확장할 수 있습니다.
@@ -205,39 +237,7 @@ List of devices attached
 
 ---
 
-## 7. 텔레그램 연결하기
-
-### 7.1 BotFather에서 newbot 생성
-진행 순서:
-- BotFather 열기
-- `/newbot` 입력
-- 봇 이름 입력
-- 봇 ID 입력
-- 발급된 봇 토큰 저장
-
-### 7.2 페어링
-예시:
-
-- Your Telegram user id: `5440299023`
-- Pairing code: `D8VZWJMF`
-
-봇 오너 승인 명령:
-```bash
-openclaw pairing approve telegram D8VZWJMF
-```
-
-복붙용:
-```bash
-openclaw pairing approve telegram D8VZWJMF
-```
-
-### 7.3 연결 확인
-- 텔레그램에서 봇에게 메시지 보내기
-- OpenClaw가 응답하는지 확인
-
----
-
-## 8. 실습용 핵심 명령어 모음
+## 9. 실습용 핵심 명령어 모음
 아래 명령어만 모아서 다시 정리합니다.
 
 ### 패키지 업데이트
