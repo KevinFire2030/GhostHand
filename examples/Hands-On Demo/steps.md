@@ -47,3 +47,5 @@ openclaw auth add google --key "YOUR_GEMINI_API_KEY_HERE"
 
 
 8716508483:AAGRT8mmikvgvSjiyRXuYku0ILhosy_N73I
+
+8746151947:AAG6W80Cr3EpTVo7ItUrrqBrdNbiqBCUA4w
