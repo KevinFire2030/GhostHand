@@ -44,3 +44,6 @@ It will ask for a Telegram Bot Token and Chat ID. If you don't have these yet, y
 
 Step 6 — Set your Gemini API key
 openclaw auth add google --key "YOUR_GEMINI_API_KEY_HERE"
+
+
+8716508483:AAGRT8mmikvgvSjiyRXuYku0ILhosy_N73I
