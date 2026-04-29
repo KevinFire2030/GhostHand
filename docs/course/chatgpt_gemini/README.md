@@ -1,4 +1,4 @@
-﻿# ChatGPT Enterprise / GPTs 핸즈온 실습
+﻿# ChatGPT Enterprise / GPTs / Codex 핸즈온 실습
 
 ## 강의 안내
 
@@ -356,3 +356,4 @@ ChatGPT Enterprise, Microsoft Copilot, Google Gemini for Workspace를 업무 활
 **ChatGPT Enterprise와 GPTs는 반복 업무를 줄이고, 문서와 지식을 활용한 실무형 PoC를 빠르게 검증하는 데 매우 유용한 도구입니다.**
 
 감사합니다.
+
