@@ -1,0 +1,10 @@
+{
+  "scenarioId": "UT-005_clock_alarm",
+  "scenarioName": "시계 앱 실행 - 07:00 알람 설정 - 알람 해제 - 홈으로 이동",
+  "runDate": "2026-04-30",
+  "status": "BLOCKED",
+  "reason": "No ADB-connected device available; adb connect 10.247.92.78:41679 returned Connection refused",
+  "deviceSerial": null,
+  "startTime": "2026-04-30T12:58:00+09:00",
+  "endTime": "2026-04-30T12:58:00+09:00"
+}

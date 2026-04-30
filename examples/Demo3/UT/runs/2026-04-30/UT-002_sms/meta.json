@@ -1,0 +1,10 @@
+{
+  "scenarioId": "UT-002_sms",
+  "scenarioName": "문자 보내기 - 홈으로 이동",
+  "runDate": "2026-04-30",
+  "status": "BLOCKED",
+  "reason": "No ADB-connected device available; adb connect 10.247.92.78:41679 returned Connection refused",
+  "deviceSerial": null,
+  "startTime": "2026-04-30T12:58:00+09:00",
+  "endTime": "2026-04-30T12:58:00+09:00"
+}
