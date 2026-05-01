@@ -1,3 +1,5 @@
+![ChatGPT Enterprise / GPTs / Codex 핸즈온 실습 인포그래픽](./인포그래픽.png)
+
 # ChatGPT Enterprise / GPTs / Codex 핸즈온 실습
 
 ## 실습 안내
