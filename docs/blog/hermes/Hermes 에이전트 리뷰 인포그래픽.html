@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Hermes 에이전트 리뷰 인포그래픽</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0b1020; font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+  .canvas {
+    width: 1080px; height: 1920px; position: relative; overflow: hidden; color: #f8fafc;
+    background:
+      radial-gradient(circle at 12% 9%, rgba(87, 80, 255, .42), transparent 25%),
+      radial-gradient(circle at 88% 4%, rgba(0, 212, 255, .30), transparent 27%),
+      radial-gradient(circle at 76% 88%, rgba(255, 174, 0, .24), transparent 26%),
+      linear-gradient(145deg, #0b1020 0%, #111a35 54%, #09111f 100%);
+    padding: 76px 70px;
+  }
+  .grid { position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 36px 36px; }
+  .orb { position: absolute; width: 360px; height: 360px; border-radius: 50%; right: -90px; top: 240px; background: linear-gradient(135deg, rgba(0,217,255,.26), rgba(255,196,0,.22)); filter: blur(2px); }
+  .content { position: relative; z-index: 2; }
+  .eyebrow { display: inline-flex; gap: 12px; align-items: center; padding: 12px 22px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.08); color: #b9d7ff; font-size: 25px; font-weight: 700; letter-spacing: -.02em; }
+  h1 { margin: 28px 0 18px; font-size: 70px; line-height: 1.08; letter-spacing: -0.065em; }
+  .highlight { color: #ffd166; text-shadow: 0 0 28px rgba(255,209,102,.25); }
+  .subtitle { width: 880px; color: #cbd5e1; font-size: 28px; line-height: 1.48; letter-spacing: -.035em; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 42px; }
+  .stat { min-height: 150px; padding: 24px 22px; border-radius: 28px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.16); box-shadow: 0 20px 60px rgba(0,0,0,.22); backdrop-filter: blur(10px); }
+  .stat b { display: block; font-size: 45px; line-height: 1; color: #fff; letter-spacing: -.04em; }
+  .stat span { display: block; margin-top: 14px; font-size: 20px; line-height: 1.35; color: #b8c5d8; }
+  .section-title { display:flex; align-items:center; gap:14px; margin: 54px 0 24px; font-size: 30px; font-weight: 900; letter-spacing: -.04em; }
+  .dot { width: 16px; height: 16px; border-radius: 50%; background: #ffd166; box-shadow: 0 0 24px rgba(255,209,102,.8); }
+  .flow { display: grid; grid-template-columns: 1fr; gap: 17px; }
+  .step { display: grid; grid-template-columns: 92px 1fr; gap: 18px; align-items: center; min-height: 116px; padding: 20px 24px; border-radius: 30px; background: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.06)); border: 1px solid rgba(255,255,255,.15); }
+  .num { width: 72px; height: 72px; border-radius: 24px; display:grid; place-items:center; font-size: 27px; font-weight: 900; color:#0b1020; background: linear-gradient(135deg, #ffd166, #00d4ff); }
+  .step h3 { margin: 0; font-size: 29px; letter-spacing: -.045em; }
+  .step p { margin: 6px 0 0; color: #cbd5e1; font-size: 21px; line-height: 1.36; letter-spacing: -.025em; }
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .card { min-height: 178px; padding: 24px; border-radius: 30px; background: rgba(8, 15, 32, .62); border: 1px solid rgba(148,163,184,.22); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+  .card .icon { font-size: 36px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 10px; font-size: 27px; letter-spacing: -.045em; }
+  .card p { margin: 0; color:#cbd5e1; font-size: 20px; line-height: 1.42; letter-spacing: -.025em; }
+  .verdict { margin-top: 42px; padding: 30px 34px; border-radius: 34px; background: linear-gradient(135deg, rgba(255,209,102,.22), rgba(0,212,255,.16)); border: 1px solid rgba(255,255,255,.20); }
+  .verdict h2 { margin: 0 0 10px; font-size: 35px; letter-spacing: -.05em; }
+  .verdict p { margin: 0; font-size: 24px; line-height: 1.45; color: #f8fafc; letter-spacing: -.035em; }
+  .footer { position: absolute; left: 70px; right: 70px; bottom: 48px; display:flex; justify-content:space-between; color:#94a3b8; font-size:18px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="grid"></div><div class="orb"></div>
+  <div class="content">
+    <div class="eyebrow">#Hermes #AI에이전트 #세컨브레인</div>
+    <h1>Hermes 에이전트 리뷰<br><span class="highlight">스스로 성장하는 AI 비서</span></h1>
+    <div class="subtitle">OpenClaw에서 Hermes로 마이그레이션하며 살펴본 설치, 스킬, 모델 설정, LLM Wiki, 텔레그램 봇 연동 핵심 정리</div>
+
+    <div class="stats">
+      <div class="stat"><b>13만+</b><span>GitHub 스타 규모의 오픈소스 학습형 에이전트</span></div>
+      <div class="stat"><b>670</b><span>바로 호출 가능한 빌트인 스킬 생태계</span></div>
+      <div class="stat"><b>17분</b><span>설치부터 텔레그램 연동까지 실습 리뷰</span></div>
+    </div>
+
+    <div class="section-title"><span class="dot"></span>리뷰에서 확인한 전환 흐름</div>
+    <div class="flow">
+      <div class="step"><div class="num">01</div><div><h3>OpenClaw 설치 감지 & 마이그레이션</h3><p>SOUL, 기존 스킬, 데일리 메모리, 설정, 토큰을 Hermes 환경으로 이전</p></div></div>
+      <div class="step"><div class="num">02</div><div><h3>모델·백엔드 유연성</h3><p>OpenAI Codex와 mini 모델 조합으로 일반 라우팅 비용 효율까지 고려</p></div></div>
+      <div class="step"><div class="num">03</div><div><h3>Telegram을 홈 채널로 설정</h3><p>Cron 결과, 공지, 외부 플랫폼 메시지를 한 창구에서 받아보는 운영 구조</p></div></div>
+    </div>
+
+    <div class="section-title"><span class="dot"></span>핵심 기능 맵</div>
+    <div class="cards">
+      <div class="card"><div class="icon">🧠</div><h3>LLM Wiki</h3><p>읽은 정보를 문서화·연결·축적해 지식 그래프처럼 성장</p></div>
+      <div class="card"><div class="icon">🧩</div><h3>ACP / Skill</h3><p>Claude Code, Codex, OpenCode와 스킬 기반 업무 자동화</p></div>
+      <div class="card"><div class="icon">🎨</div><h3>File AI · 디자인.md</h3><p>이미지·비디오 생성과 브랜드 스펙 세팅까지 확장</p></div>
+      <div class="card"><div class="icon">📱</div><h3>Termux 지원</h3><p>Android에서도 설치 가능한 상시형 개인 AI 비서 실험</p></div>
+    </div>
+
+    <div class="verdict">
+      <h2>총평</h2>
+      <p>Hermes는 단순 챗봇보다 “기억·스킬·도구·채널”을 묶어 사용자의 업무 흐름과 함께 성장하는 개인 AI 세컨브레인에 가깝다.</p>
+    </div>
+  </div>
+  <div class="footer"><span>Source: docs/blog/hermes/Hermes 에이전트 리뷰.md</span><span>GhostHand · Hermes</span></div>
+</div>
+</body>
+</html>
