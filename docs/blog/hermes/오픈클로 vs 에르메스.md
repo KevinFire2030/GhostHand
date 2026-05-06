@@ -1,3 +1,5 @@
+![openclaw vs hermes](./openclaw%20vs%20hermes.png)
+
 # 오픈클로 vs 에르메스: 개인 AI 에이전트 역할 분담안
 
 ![오픈클로 vs 에르메스 인포그래픽](./오픈클로%20vs%20에르메스%20인포그래픽.svg)
