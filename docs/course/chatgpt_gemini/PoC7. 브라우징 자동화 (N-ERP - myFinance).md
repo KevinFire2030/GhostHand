@@ -1,3 +1,6 @@
+<img width="1672" height="941" alt="PoC7  핸즈온데모 인포그래픽" src="https://github.com/user-attachments/assets/c34e1d4e-c272-4143-8f60-167c4512d7fc" />
+
+
 # 3-10. PoC7. 브라우징 자동화 (N-ERP - myFinance)
 
 ## Hands-on Demo 목표
