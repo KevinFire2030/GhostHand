@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">오픈클로 vs 에르메스 인포그래픽</title>
+  <desc id="desc">오픈클로와 에르메스의 장단점 및 역할 분담을 비교한 16대9 인포그래픽</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7ed"/>
+      <stop offset="48%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="leftGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="rightGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .font { font-family: 'Noto Sans CJK KR', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Pretendard', Arial, sans-serif; }
+      .title { font-weight: 900; font-size: 72px; fill: #0f172a; letter-spacing: -2px; }
+      .subtitle { font-weight: 700; font-size: 30px; fill: #475569; }
+      .side-title { font-weight: 900; font-size: 54px; fill: #ffffff; }
+      .side-sub { font-weight: 800; font-size: 28px; fill: #ffffff; opacity: .96; }
+      .section-head { font-weight: 900; font-size: 26px; fill: #0f172a; }
+      .chip { font-weight: 800; font-size: 24px; fill: #0f172a; }
+      .small { font-weight: 700; font-size: 21px; fill: #334155; }
+      .white-small { font-weight: 800; font-size: 22px; fill: #ffffff; }
+      .quote { font-weight: 900; font-size: 30px; fill: #ffffff; }
+      .micro { font-weight: 700; font-size: 18px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="118" cy="126" r="58" fill="#fde68a" opacity=".75"/>
+  <circle cx="1480" cy="125" r="72" fill="#c4b5fd" opacity=".65"/>
+  <rect x="1295" y="725" width="160" height="160" rx="36" fill="#67e8f9" opacity=".32" transform="rotate(12 1375 805)"/>
+  <rect x="82" y="705" width="140" height="140" rx="32" fill="#fdba74" opacity=".30" transform="rotate(-14 152 775)"/>
+
+  <text class="font title" x="800" y="82" text-anchor="middle">오픈클로 vs 에르메스</text>
+  <text class="font subtitle" x="800" y="126" text-anchor="middle">빠른 실행형 AI 도구 vs 장기 운영형 개인 AI팀</text>
+
+  <rect x="90" y="170" width="650" height="550" rx="42" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="860" y="170" width="650" height="550" rx="42" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="90" y="170" width="650" height="122" rx="42" fill="url(#leftGrad)"/>
+  <rect x="90" y="250" width="650" height="42" fill="#facc15" opacity=".45"/>
+  <rect x="860" y="170" width="650" height="122" rx="42" fill="url(#rightGrad)"/>
+  <rect x="860" y="250" width="650" height="42" fill="#06b6d4" opacity=".30"/>
+
+  <text class="font side-title" x="415" y="225" text-anchor="middle">오픈클로</text>
+  <text class="font side-sub" x="415" y="266" text-anchor="middle">빠른 실행 담당 AI</text>
+  <text class="font side-title" x="1185" y="225" text-anchor="middle">에르메스</text>
+  <text class="font side-sub" x="1185" y="266" text-anchor="middle">개인 AI팀 운영 플랫폼</text>
+
+  <line x1="800" y1="165" x2="800" y2="728" stroke="#cbd5e1" stroke-width="6" stroke-dasharray="18 18"/>
+  <circle cx="800" cy="430" r="74" fill="#0f172a" filter="url(#shadow)"/>
+  <text class="font" x="800" y="454" text-anchor="middle" font-size="54" font-weight="900" fill="#ffffff">VS</text>
+
+  <!-- Left icon: AI multitool -->
+  <g transform="translate(150 318)">
+    <rect x="0" y="22" width="162" height="94" rx="30" fill="#fff7ed" stroke="#fb923c" stroke-width="5"/>
+    <circle cx="44" cy="69" r="24" fill="#fb923c"/>
+    <path d="M104 30 L78 76 H104 L88 124 L136 58 H110 Z" fill="#facc15"/>
+    <rect x="124" y="72" width="66" height="34" rx="17" fill="#14b8a6"/>
+    <text class="font white-small" x="157" y="96" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- Right icon: AI ops center -->
+  <g transform="translate(920 315)">
+    <circle cx="84" cy="74" r="54" fill="#ede9fe" stroke="#7c3aed" stroke-width="5"/>
+    <path d="M62 68 C48 48 76 36 86 52 C96 34 128 48 112 72 C132 82 114 112 91 100 C78 118 48 102 62 82 Z" fill="#7c3aed" opacity=".88"/>
+    <circle cx="192" cy="36" r="24" fill="#06b6d4"/>
+    <circle cx="210" cy="126" r="24" fill="#facc15"/>
+    <circle cx="14" cy="134" r="24" fill="#fb923c"/>
+    <path d="M128 62 L172 44 M128 88 L188 118 M50 106 L30 124" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left content -->
+  <text class="font section-head" x="150" y="475">강점</text>
+  <g class="font chip">
+    <rect x="150" y="498" width="132" height="50" rx="25" fill="#ffedd5"/><text x="216" y="531" text-anchor="middle">가볍다</text>
+    <rect x="300" y="498" width="132" height="50" rx="25" fill="#fef3c7"/><text x="366" y="531" text-anchor="middle">직관적</text>
+    <rect x="450" y="498" width="142" height="50" rx="25" fill="#ccfbf1"/><text x="521" y="531" text-anchor="middle">단기 작업</text>
+    <rect x="150" y="563" width="142" height="50" rx="25" fill="#fef9c3"/><text x="221" y="596" text-anchor="middle">즉시 실행</text>
+    <rect x="310" y="563" width="190" height="50" rx="25" fill="#dcfce7"/><text x="405" y="596" text-anchor="middle">운영 부담 적음</text>
+  </g>
+  <text class="font section-head" x="150" y="655">주의점</text>
+  <g class="font small">
+    <text x="150" y="688">• 장기 기억 약함</text>
+    <text x="370" y="688">• 스킬 축적 제한</text>
+    <text x="150" y="718">• 비동기 자동화 약함</text>
+  </g>
+
+  <!-- Right content -->
+  <text class="font section-head" x="920" y="475">강점</text>
+  <g class="font chip">
+    <rect x="920" y="498" width="142" height="50" rx="25" fill="#ede9fe"/><text x="991" y="531" text-anchor="middle">장기 기억</text>
+    <rect x="1080" y="498" width="162" height="50" rx="25" fill="#dbeafe"/><text x="1161" y="531" text-anchor="middle">스킬 재사용</text>
+    <rect x="1260" y="498" width="162" height="50" rx="25" fill="#cffafe"/><text x="1341" y="531" text-anchor="middle">크론 자동화</text>
+    <rect x="920" y="563" width="162" height="50" rx="25" fill="#ccfbf1"/><text x="1001" y="596" text-anchor="middle">메신저 연동</text>
+    <rect x="1100" y="563" width="190" height="50" rx="25" fill="#fef3c7"/><text x="1195" y="596" text-anchor="middle">멀티 도구 확장</text>
+    <rect x="1310" y="563" width="140" height="50" rx="25" fill="#fae8ff"/><text x="1380" y="596" text-anchor="middle">AI팀 운영</text>
+  </g>
+  <text class="font section-head" x="920" y="655">주의점</text>
+  <g class="font small">
+    <text x="920" y="688">• 초기 설정 복잡</text>
+    <text x="1140" y="688">• 학습 비용</text>
+    <text x="1320" y="688">• 관리 필요</text>
+    <text x="920" y="718">• 기능 과다</text>
+  </g>
+
+  <!-- Bottom decision bar -->
+  <rect x="150" y="765" width="1300" height="86" rx="43" fill="#0f172a" filter="url(#shadow)"/>
+  <text class="font quote" x="800" y="817" text-anchor="middle">역할 분담: 가벼운 즉시 실행은 오픈클로 · 반복/축적/자동화는 에르메스</text>
+  <text class="font micro" x="800" y="870" text-anchor="middle">오픈클로는 손에 든 AI 도구, 에르메스는 반복 업무를 맡는 개인 AI팀</text>
+</svg>
