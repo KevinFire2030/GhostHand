@@ -167,3 +167,36 @@ http://api.slack.com/apps
 
 
 
+<img width="1387" height="805" alt="image" src="https://github.com/user-attachments/assets/8753c635-572a-4ea8-9729-34f3bf204d8c" />
+
+
+<img width="1340" height="797" alt="image" src="https://github.com/user-attachments/assets/e7646c7e-57a5-479a-a15e-186b647392fe" />
+
+
+<img width="1367" height="781" alt="image" src="https://github.com/user-attachments/assets/e9f4d02f-5182-4c76-be7f-884b74489c6d" />
+
+
+<img width="1362" height="757" alt="image" src="https://github.com/user-attachments/assets/0c87f6d0-f2aa-4c80-9afe-15ef5593d30c" />
+
+
+
+<img width="1337" height="723" alt="image" src="https://github.com/user-attachments/assets/be6e3188-085b-4974-ab16-3361a7011ab2" />
+
+
+<img width="1352" height="718" alt="image" src="https://github.com/user-attachments/assets/64fabd8d-f19e-4157-a435-f180078d1dba" />
+
+
+
+<img width="1287" height="726" alt="image" src="https://github.com/user-attachments/assets/5eedb4df-946d-45cd-96db-0cd26b901c03" />
+
+
+
+
+
+
+
+
+
+
+
+
