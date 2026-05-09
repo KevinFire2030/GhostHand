@@ -60,26 +60,110 @@
 
 
 
+<img width="1316" height="672" alt="image" src="https://github.com/user-attachments/assets/b315c8ba-4501-428f-91ac-9adf4419d54a" />
+
+
+<img width="1112" height="600" alt="image" src="https://github.com/user-attachments/assets/80cbbfa1-dbb8-4506-9789-fba2f0e42eae" />
+
+
+
+<img width="1317" height="640" alt="image" src="https://github.com/user-attachments/assets/fb6a3642-9d95-4f37-bf15-f1e1dd82dd3f" />
+
+
+<img width="1603" height="706" alt="image" src="https://github.com/user-attachments/assets/78238a05-2dad-4619-ae98-b5003e237f29" />
+
+
+<img width="1347" height="707" alt="image" src="https://github.com/user-attachments/assets/50aaefbc-302a-4d81-99b2-f345dc56bcb4" />
+
+
+<img width="1288" height="655" alt="image" src="https://github.com/user-attachments/assets/79b05078-dfb4-479d-850b-0d89260c47be" />
+
+
+<img width="1377" height="763" alt="image" src="https://github.com/user-attachments/assets/c8e41c53-1081-4a6f-9335-bc2a3b8370a4" />
+
+
+<img width="1373" height="703" alt="image" src="https://github.com/user-attachments/assets/6308c940-6aef-4ea8-8263-1cefac82f01c" />
+
+
+<img width="1377" height="702" alt="image" src="https://github.com/user-attachments/assets/7b8f8808-3e2f-4eaf-be97-54326e24a3c8" />
+
+
+<img width="1393" height="767" alt="image" src="https://github.com/user-attachments/assets/6c91ed30-213c-4a74-95f0-197bbc82f463" />
+
+
+
+<img width="1365" height="708" alt="image" src="https://github.com/user-attachments/assets/88ba4352-3f55-4fb6-9e7f-65840a30cc76" />
+
+openclaw doctor
+
+
+
+<img width="1385" height="758" alt="image" src="https://github.com/user-attachments/assets/a04f64e0-2199-44da-881a-be0c1966db50" />
+
+
+<img width="1378" height="713" alt="image" src="https://github.com/user-attachments/assets/ee5bcea1-93df-4686-9efb-1ce4fa55dc26" />
+
+$openclaw agents add assistant-demo
+
+
+
+
+<img width="1407" height="722" alt="image" src="https://github.com/user-attachments/assets/473d5ffe-05f8-4519-bb0f-be626fa225b8" />
+
+
+$openclaw configure
+
+
+spark
+
+
+<img width="1396" height="697" alt="image" src="https://github.com/user-attachments/assets/cbed6e78-ba3a-480d-86af-fa974f3757aa" />
+
+
+
+<img width="1377" height="757" alt="image" src="https://github.com/user-attachments/assets/9af1829f-62d4-4c5b-9d66-bcfecc342032" />
 
 
 
 
 
+$openclaw configure
+
+channels
+
+$openclaw pairing approve telegramg xxxxxxxxx
 
 
 
 
+<img width="1402" height="777" alt="image" src="https://github.com/user-attachments/assets/9757ff69-2c77-485a-9e81-1df2501775a2" />
 
 
 
+<img width="1410" height="721" alt="image" src="https://github.com/user-attachments/assets/43ab8c0d-ec81-4ca6-83cf-e000d3c33a04" />
+
+
+<img width="1392" height="718" alt="image" src="https://github.com/user-attachments/assets/7d01b89f-4e9a-4dfb-82bb-dfc93ea09663" />
+
+
+$openclaw security audit
+
+
+<img width="1407" height="705" alt="image" src="https://github.com/user-attachments/assets/8e49fd1c-1853-4492-8567-0f3d35a1665b" />
+
+
+<img width="1267" height="622" alt="image" src="https://github.com/user-attachments/assets/f751ff43-d35e-43b2-96f3-a7aef605b466" />
+
+
+<img width="1306" height="712" alt="image" src="https://github.com/user-attachments/assets/28070a95-f73f-4d0e-a518-424896528357" />
 
 
 
+<img width="1267" height="648" alt="image" src="https://github.com/user-attachments/assets/b2b54164-a6f3-44f3-a49b-f39de1705b00" />
 
 
 
-
-
+http://api.slack.com/apps
 
 
 
