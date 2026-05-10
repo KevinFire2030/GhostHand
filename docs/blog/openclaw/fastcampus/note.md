@@ -658,6 +658,226 @@ paperclip
 
 
 
+<img width="1543" height="892" alt="image" src="https://github.com/user-attachments/assets/fa06e01b-f702-45b5-a7b3-39548219b2d8" />
+
+
+<img width="1550" height="906" alt="image" src="https://github.com/user-attachments/assets/96bcc16b-c1ce-4b9b-a6e8-ed3982d50836" />
+
+
+
+<img width="1559" height="902" alt="image" src="https://github.com/user-attachments/assets/65204054-780b-43bf-b566-ec1a8260cf1b" />
+
+
+
+
+<img width="1601" height="983" alt="image" src="https://github.com/user-attachments/assets/d20e4703-fb99-47ae-9931-23034ddefd9d" />
+
+
+<img width="1546" height="911" alt="image" src="https://github.com/user-attachments/assets/1cca6f1e-edac-407d-bf0d-56dcdacc13a7" />
+
+
+<img width="1547" height="883" alt="image" src="https://github.com/user-attachments/assets/b9e68d11-f092-412d-80d2-64ccf73ec572" />
+
+
+<img width="1577" height="901" alt="image" src="https://github.com/user-attachments/assets/3e2d3bf1-bd84-4ecc-9fec-7bb5d0bd26d2" />
+
+
+<img width="1538" height="898" alt="image" src="https://github.com/user-attachments/assets/f3f718a8-08d9-45fb-9813-c0a77865a42a" />
+
+
+<img width="1521" height="835" alt="image" src="https://github.com/user-attachments/assets/b3912cd0-2d29-4659-b9d6-75ba1d7d33d9" />
+
+
+<img width="1516" height="880" alt="image" src="https://github.com/user-attachments/assets/714bd07e-3853-4514-9f84-8b9bbba42d0a" />
+
+
+<img width="1552" height="895" alt="image" src="https://github.com/user-attachments/assets/93c1f351-6821-4a03-8e73-289b2f924d05" />
+
+
+
+
+<img width="1564" height="907" alt="image" src="https://github.com/user-attachments/assets/87243b51-5deb-4c73-ac70-01498cd53d3f" />
+
+
+
+<img width="1555" height="906" alt="image" src="https://github.com/user-attachments/assets/1257bada-c11b-4813-bf58-a935a19b2d21" />
+
+
+<img width="1547" height="896" alt="image" src="https://github.com/user-attachments/assets/0d960fbc-72fe-42ee-ac59-02deb3716698" />
+
+
+<img width="1518" height="902" alt="image" src="https://github.com/user-attachments/assets/dbf8fb49-8806-4382-b4ea-064f4ad869ab" />
+
+
+
+<img width="1537" height="898" alt="image" src="https://github.com/user-attachments/assets/e7a7bc20-c912-43af-9685-719dda2baca7" />
+
+
+
+<img width="1538" height="904" alt="image" src="https://github.com/user-attachments/assets/8417c908-328b-45d6-a005-759face0b3fa" />
+
+
+<img width="1550" height="917" alt="image" src="https://github.com/user-attachments/assets/5fa7b819-8c97-48a0-8818-d172ddbe9083" />
+
+
+
+<img width="1528" height="906" alt="image" src="https://github.com/user-attachments/assets/b535d518-dcdf-4d33-9bc6-18ab7e2db16e" />
+
+
+<img width="1557" height="894" alt="image" src="https://github.com/user-attachments/assets/a9b44c70-e4ef-4787-8820-ba0a7998860f" />
+
+
+
+
+<img width="1546" height="900" alt="image" src="https://github.com/user-attachments/assets/2bb007b7-b5b6-4b21-ab93-7d1bcf337c05" />
+
+
+
+<img width="1540" height="886" alt="image" src="https://github.com/user-attachments/assets/d351da53-9a21-4883-b4dd-6239ab3bef92" />
+
+
+2주 정도 쓰면 메모리 이상 온다
+
+
+
+
+<img width="1558" height="897" alt="image" src="https://github.com/user-attachments/assets/12c7b230-b417-40d8-817c-147b03586912" />
+
+
+
+<img width="1519" height="895" alt="image" src="https://github.com/user-attachments/assets/aef44e42-057a-4baa-b366-7a20eb020075" />
+
+
+
+<img width="1539" height="895" alt="image" src="https://github.com/user-attachments/assets/daac69b1-adbd-4847-9047-5321671276c7" />
+
+
+인간이 병목이다 ㅠ
+
+
+
+
+<img width="1549" height="896" alt="image" src="https://github.com/user-attachments/assets/164af4df-f519-4814-94e2-456223abbfe5" />
+
+
+
+
+<img width="1560" height="903" alt="image" src="https://github.com/user-attachments/assets/4e4316a5-36a7-46f0-ae2e-67862768f7ce" />
+
+
+
+<img width="1559" height="804" alt="image" src="https://github.com/user-attachments/assets/1daae35c-af87-46c4-8e3b-0f7ee611b98b" />
+
+
+
+<img width="1549" height="892" alt="image" src="https://github.com/user-attachments/assets/385eaa9a-b039-4002-ab73-9f77c40e0952" />
+
+
+### 메모리 관리
+- 2-3주 한계
+- 똑똑함이 떨어진다 -> 대대분 메모리 문제
+
+### FAQ
+
+
+### 팀은 진화한다
+
+
+
+<img width="1546" height="907" alt="image" src="https://github.com/user-attachments/assets/ecc7f888-4950-4caa-a0df-43fd5baca498" />
+
+### 1개월 뒤 흔한 상황
+
+- 아무말 대잔치 시작
+
+
+<img width="1538" height="889" alt="image" src="https://github.com/user-attachments/assets/ee33b8d2-68e6-463a-b2f6-038f88bef450" />
+
+### 메모리 4단 레이어
+- 영구
+- 3일
+- 15일
+- 30일
+
+
+<img width="1527" height="919" alt="image" src="https://github.com/user-attachments/assets/82ba2c3a-325c-48fa-a42b-5ca9aaee23fa" />
+
+
+### Upsert 규칙 - append 금지
+
+
+<img width="1541" height="919" alt="image" src="https://github.com/user-attachments/assets/5181c458-7c9f-4696-aff4-b186b1fb5ad2" />
+
+### 자동 정리 - 밤 청소부
+- 4KB 유지
+
+
+<img width="1542" height="889" alt="image" src="https://github.com/user-attachments/assets/b5af0c82-2202-44c7-9227-1152082802d8" />
+
+
+### Dreams
+- 
+
+
+<img width="1403" height="794" alt="image" src="https://github.com/user-attachments/assets/27865c1f-a1a4-445a-b4a9-7f1e368628f5" />
+
+### 5분 점검
+- 5K 이상이면 크다
+
+
+<img width="1397" height="802" alt="image" src="https://github.com/user-attachments/assets/de311f93-73d2-4185-a94a-2b0dc2b6ae24" />
+
+<img width="1379" height="810" alt="image" src="https://github.com/user-attachments/assets/04624b2b-4a27-43c0-80d9-ff0a03fcd2d5" />
+
+### FAQ
+- 월비용
+. $600-800
+
+
+<img width="1379" height="791" alt="image" src="https://github.com/user-attachments/assets/19f7fc47-e780-42f8-8077-1f124a26b266" />
+
+
+
+<img width="1394" height="813" alt="image" src="https://github.com/user-attachments/assets/e5dcc461-5039-4d69-9c69-86d529aaf9c5" />
+
+
+
+<img width="1405" height="813" alt="image" src="https://github.com/user-attachments/assets/4be98397-15af-4da6-a9ec-150bfc577b9f" />
+
+
+
+<img width="1407" height="808" alt="image" src="https://github.com/user-attachments/assets/74039c67-1461-4219-b912-a715cd1bb409" />
+
+
+
+<img width="1386" height="797" alt="image" src="https://github.com/user-attachments/assets/a7c961af-ceb7-4aef-b599-5bba6af433f4" />
+
+
+
+<img width="1390" height="786" alt="image" src="https://github.com/user-attachments/assets/2381d6b1-0dba-4290-a8c3-08a54c140344" />
+
+
+
+<img width="1377" height="785" alt="image" src="https://github.com/user-attachments/assets/3cf53369-1d4a-4f64-8b01-257053fe54c5" />
+
+
+
+
+<img width="1448" height="817" alt="image" src="https://github.com/user-attachments/assets/23590541-e435-4c46-9055-ab8dbae7f7ec" />
+
+
+### Claw3D
+- 오픈소
+
+<img width="1438" height="904" alt="image" src="https://github.com/user-attachments/assets/03a3323a-e8f3-4f5d-9e9f-5f994305d963" />
+
+
+
+
+
+
+
+
 
 
 
