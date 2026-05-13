@@ -1,5 +1,7 @@
 # 개인 자동화 PoC를 사내 배포 가능한 AX 도구로 확장하기
 
+![개인 자동화 PoC를 사내 배포 가능한 AX 도구로 확장하기](./Infographic/poc_to_enterprise_ax_tool_infographic_imagegen.png)
+
 ## 문제 제기: 핵심 병목
 
 사내 시스템은 대부분 SaaS 형태로 운영된다. 문제는 많은 SaaS가 업무 자동화에 필요한 API를 충분히 제공하지 않는다는 점이다.
