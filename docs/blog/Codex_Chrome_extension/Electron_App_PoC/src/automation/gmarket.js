@@ -27,6 +27,35 @@ async function emit(onStep, message, detail = {}) {
   }
 }
 
+async function waitForSearchBox(page, onStep, { visibleBrowser }) {
+  const searchBox = page.locator("#form__search-keyword");
+
+  try {
+    await searchBox.waitFor({ state: "visible", timeout: 15000 });
+    return searchBox;
+  } catch (error) {
+    const bodyText = await page.locator("body").innerText({ timeout: 5000 }).catch(() => "");
+    const isBotCheck =
+      bodyText.includes("봇 확인") ||
+      bodyText.includes("간단한 확인") ||
+      bodyText.includes("Just a moment");
+
+    if (!isBotCheck) {
+      throw error;
+    }
+
+    if (!visibleBrowser) {
+      throw new Error(
+        "G마켓 봇 확인 화면이 표시되었습니다. 앱에서 '자동화 브라우저 창 보이기'를 켜고 사용자가 확인을 완료해야 합니다."
+      );
+    }
+
+    await emit(onStep, "G마켓 봇 확인 화면이 표시되었습니다. 열린 브라우저 창에서 확인을 완료하면 자동으로 이어갑니다.");
+    await searchBox.waitFor({ state: "visible", timeout: 180000 });
+    return searchBox;
+  }
+}
+
 async function runGmarketAutomation({
   keyword = "무선 마우스",
   sortMode = "review",
@@ -56,8 +85,7 @@ async function runGmarketAutomation({
     });
 
     await emit(onStep, "검색어를 입력합니다.", { keyword });
-    const searchBox = page.locator("#form__search-keyword");
-    await searchBox.waitFor({ state: "visible", timeout: 15000 });
+    const searchBox = await waitForSearchBox(page, onStep, { visibleBrowser });
     await searchBox.fill(keyword);
 
     await emit(onStep, "검색을 실행합니다.");
