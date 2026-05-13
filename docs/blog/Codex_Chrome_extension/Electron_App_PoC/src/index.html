@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G마켓 검색 자동화 PoC</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Electron + Playwright PoC</p>
+          <h1>G마켓 상품 검색 및 정렬 자동화</h1>
+          <p class="summary">
+            Chrome DevTools Recorder 실습에서 검증한 흐름을 버튼형 데스크톱 앱으로 옮긴 예제입니다.
+          </p>
+        </div>
+        <div class="safe-box">
+          <strong>안전 조건</strong>
+          <span>상품 상세, 장바구니, 구매, 결제는 실행하지 않습니다.</span>
+        </div>
+      </section>
+
+      <section class="control-panel">
+        <label class="field">
+          <span>검색어</span>
+          <input id="keyword" type="text" value="무선 마우스" autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span>정렬 옵션</span>
+          <select id="sortMode">
+            <option value="review">상품평 많은순</option>
+          </select>
+        </label>
+
+        <label class="toggle">
+          <input id="visibleBrowser" type="checkbox" checked />
+          <span>자동화 브라우저 창 보이기</span>
+        </label>
+
+        <button id="runButton" type="button">검색 및 정렬 실행</button>
+      </section>
+
+      <section class="status-grid">
+        <article>
+          <h2>실행 로그</h2>
+          <ol id="log" class="log"></ol>
+        </article>
+
+        <article>
+          <h2>결과</h2>
+          <div id="result" class="result empty">아직 실행 전입니다.</div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "gmarket-browser-automation-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron + Playwright PoC for Gmarket product search and sorting automation.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "install:browsers": "playwright install chromium",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/renderer.js && node --check src/automation/gmarket.js"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7"
+  }
+}
