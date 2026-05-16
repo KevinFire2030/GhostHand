@@ -21,6 +21,19 @@ npm start
 앱 상단의 `OpenClaw Webhook Endpoint`에 실제 웹훅 URL을 입력합니다.
 비워두면 PoC 데모용 로컬 mock 결과를 반환합니다.
 
+로컬 테스트에서는 프로젝트 루트에 `.env` 파일을 만들면 앱 실행 시 자동으로 Endpoint/Token을 채웁니다.
+
+```bash
+cp .env.example .env
+```
+
+```env
+OPENCLAW_WEBHOOK_ENDPOINT=http://127.0.0.1:18789/webhook/receipt-account
+OPENCLAW_WEBHOOK_TOKEN=your-token
+```
+
+`.env`는 Git에 올리지 않습니다. 공유용 값은 `.env.example`만 사용하세요.
+
 요청 JSON 예시:
 
 ```json

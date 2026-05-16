@@ -20,6 +20,22 @@ const reasonText = $('reasonText');
 const rawResponse = $('rawResponse');
 const flowItems = Array.from(document.querySelectorAll('#flowList li'));
 
+loadSavedConfig();
+
+async function loadSavedConfig() {
+  try {
+    const config = await window.receiptApi.getConfig();
+    if (config?.endpoint) endpointInput.value = config.endpoint;
+    if (config?.apiKey) apiKeyInput.value = config.apiKey;
+    if (config?.endpoint || config?.apiKey) {
+      connectionStatus.textContent = 'OpenClaw 설정 로드됨';
+      setLog('.env 설정을 불러왔습니다. 영수증 이미지를 선택하면 바로 OpenClaw 웹훅으로 분석할 수 있습니다.');
+    }
+  } catch (error) {
+    console.warn('Failed to load local config', error);
+  }
+}
+
 selectButton.addEventListener('click', async () => {
   try {
     const file = await window.receiptApi.selectImage();

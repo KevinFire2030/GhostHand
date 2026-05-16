@@ -35,6 +35,15 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
 
+ipcMain.handle('receipt:getConfig', async () => {
+  const env = await loadLocalEnv();
+
+  return {
+    endpoint: env.OPENCLAW_WEBHOOK_ENDPOINT || process.env.OPENCLAW_WEBHOOK_ENDPOINT || '',
+    apiKey: env.OPENCLAW_WEBHOOK_TOKEN || env.OPENCLAW_API_KEY || process.env.OPENCLAW_WEBHOOK_TOKEN || process.env.OPENCLAW_API_KEY || ''
+  };
+});
+
 ipcMain.handle('receipt:selectImage', async () => {
   const result = await dialog.showOpenDialog({
     title: '영수증 이미지 선택',
@@ -120,6 +129,44 @@ function normalizeWebhookResponse(data) {
     confidence: confidence || null,
     raw: data
   };
+}
+
+async function loadLocalEnv() {
+  const candidates = [
+    path.join(app.getAppPath(), '.env'),
+    path.join(process.cwd(), '.env'),
+    path.join(path.dirname(process.execPath), '.env')
+  ];
+
+  for (const envPath of candidates) {
+    try {
+      const content = await fs.readFile(envPath, 'utf8');
+      return parseEnv(content);
+    } catch {
+      // 다음 후보를 확인한다.
+    }
+  }
+
+  return {};
+}
+
+function parseEnv(content) {
+  return String(content)
+    .split(/\r?\n/)
+    .reduce((acc, line) => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) return acc;
+      const separator = trimmed.indexOf('=');
+      if (separator === -1) return acc;
+
+      const key = trimmed.slice(0, separator).trim();
+      let value = trimmed.slice(separator + 1).trim();
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      acc[key] = value;
+      return acc;
+    }, {});
 }
 
 function createLocalMockRecommendation(fileName) {
