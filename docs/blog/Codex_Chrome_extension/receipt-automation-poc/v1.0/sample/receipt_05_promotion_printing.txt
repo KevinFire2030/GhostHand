@@ -1,0 +1,11 @@
+file=receipt_05_promotion_printing.png
+merchant=프린트24 홍대점
+business_registration_number=119-03-45671
+transaction_datetime=2026-05-19 16:20:55
+approval_number=64281904
+card=롯데카드
+total_amount=47000
+supply_amount=42727
+tax_amount=4273
+account_hint=판촉비
+items=홍보 리플렛 인쇄 x100 @350; 코팅 x100 @120

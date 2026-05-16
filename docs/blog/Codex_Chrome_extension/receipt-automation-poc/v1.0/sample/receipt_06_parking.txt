@@ -1,0 +1,11 @@
+file=receipt_06_parking.png
+merchant=코엑스 주차장
+business_registration_number=120-81-09876
+transaction_datetime=2026-05-20 19:04:10
+approval_number=90357128
+card=하나카드
+total_amount=14400
+supply_amount=13091
+tax_amount=1309
+account_hint=국내교통비
+items=주차요금 3시간 x1 @14400

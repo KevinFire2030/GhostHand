@@ -1,0 +1,11 @@
+file=receipt_01_cafe_meeting.png
+merchant=스타벅스 강남역점
+business_registration_number=123-45-67890
+transaction_datetime=2026-05-16 14:32:18
+approval_number=83749215
+card=신한카드
+total_amount=13500
+supply_amount=12273
+tax_amount=1227
+account_hint=회의비
+items=카페 아메리카노 Tall x2 @4500; 치즈 베이글 x1 @4500

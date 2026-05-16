@@ -1,0 +1,11 @@
+file=receipt_04_client_lunch.png
+merchant=한우정 삼성점
+business_registration_number=105-87-24680
+transaction_datetime=2026-05-18 12:58:21
+approval_number=77412038
+card=삼성카드
+total_amount=80000
+supply_amount=72727
+tax_amount=7273
+account_hint=접대비
+items=점심 특선 x4 @18000; 음료 x4 @2000

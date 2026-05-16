@@ -118,17 +118,51 @@ ipcMain.handle('receipt:analyze', async (_event, payload) => {
 
 function normalizeWebhookResponse(data) {
   // OpenClaw webhook/agent 응답 형태가 달라도 데모 UI가 깨지지 않도록 주요 필드를 흡수한다.
-  const candidate = data?.result || data?.data || data?.response || data;
-  const account = candidate?.account || candidate?.recommendedAccount || candidate?.category || candidate?.정산계정 || candidate?.추천계정;
-  const reason = candidate?.reason || candidate?.rationale || candidate?.message || candidate?.이유 || candidate?.raw;
-  const confidence = candidate?.confidence || candidate?.score || candidate?.신뢰도;
+  // 단, top-level에 명시적인 결과가 있으면 nested result/message보다 우선한다.
+  const candidates = [
+    data,
+    parseJsonIfPossible(data?.result),
+    parseJsonIfPossible(data?.data),
+    parseJsonIfPossible(data?.response),
+    parseJsonIfPossible(data?.message),
+    data?.result,
+    data?.data,
+    data?.response
+  ].filter((item) => item && typeof item === 'object');
+
+  const account = firstValue(candidates, ['account', 'recommendedAccount', 'category', '정산계정', '추천계정']);
+  const reason = firstValue(candidates, ['reason', 'rationale', '이유']);
+  const confidence = firstValue(candidates, ['confidence', 'score', '신뢰도']);
+  const fallbackMessage = firstValue(candidates, ['message', 'raw']);
 
   return {
     account: account || '분석 결과 확인 필요',
-    reason: reason || '웹훅 응답은 수신했지만 추천 계정/이유 필드를 찾지 못했습니다.',
-    confidence: confidence || null,
+    reason: reason || fallbackMessage || '웹훅 응답은 수신했지만 추천 계정/이유 필드를 찾지 못했습니다.',
+    confidence: confidence ?? null,
     raw: data
   };
+}
+
+function firstValue(candidates, keys) {
+  for (const candidate of candidates) {
+    for (const key of keys) {
+      const value = candidate?.[key];
+      if (value !== undefined && value !== null && value !== '') return value;
+    }
+  }
+  return null;
+}
+
+function parseJsonIfPossible(value) {
+  if (typeof value !== 'string') return value;
+  const trimmed = value.trim();
+  if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return value;
+
+  try {
+    return JSON.parse(trimmed);
+  } catch {
+    return value;
+  }
 }
 
 async function loadLocalEnv() {

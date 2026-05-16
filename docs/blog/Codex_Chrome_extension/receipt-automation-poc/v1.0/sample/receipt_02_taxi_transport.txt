@@ -1,0 +1,11 @@
+file=receipt_02_taxi_transport.png
+merchant=서울개인택시 27바1234
+business_registration_number=214-11-90876
+transaction_datetime=2026-05-17 08:45:03
+approval_number=51290377
+card=현대카드
+total_amount=21000
+supply_amount=19091
+tax_amount=1909
+account_hint=국내교통비
+items=택시 운임 x1 @18200; 심야/거리 할증 x1 @2800

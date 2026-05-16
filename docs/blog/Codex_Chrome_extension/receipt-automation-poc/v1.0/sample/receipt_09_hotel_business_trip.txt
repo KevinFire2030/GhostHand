@@ -1,0 +1,11 @@
+file=receipt_09_hotel_business_trip.png
+merchant=부산비즈니스호텔
+business_registration_number=617-81-98765
+transaction_datetime=2026-05-22 07:50:31
+approval_number=55091836
+card=NH농협카드
+total_amount=113000
+supply_amount=102727
+tax_amount=10273
+account_hint=출장비
+items=객실 1박 x1 @98000; 조식 x1 @15000
