@@ -73,16 +73,33 @@ ipcMain.handle('receipt:selectImage', async () => {
 ipcMain.handle('receipt:analyze', async (_event, payload) => {
   if (!payload?.filePath) throw new Error('분석할 이미지 파일이 없습니다.');
 
+  const timing = {};
+  const mark = () => performance.now();
+  const totalStart = mark();
+
   const endpoint = String(payload.endpoint || '').trim();
   const apiKey = String(payload.apiKey || '').trim();
-  const imageBuffer = await fs.readFile(payload.filePath);
-  const imageBase64 = imageBuffer.toString('base64');
   const fileName = path.basename(payload.filePath);
 
+  const fileReadStart = mark();
+  const imageBuffer = await fs.readFile(payload.filePath);
+  timing.fileReadMs = mark() - fileReadStart;
+
+  const base64Start = mark();
+  const imageBase64 = imageBuffer.toString('base64');
+  timing.base64Ms = mark() - base64Start;
+
   if (!endpoint) {
-    return createLocalMockRecommendation(fileName);
+    const mockStart = mark();
+    const mockResult = createLocalMockRecommendation(fileName);
+    timing.webhookWaitMs = 0;
+    timing.responseParseMs = 0;
+    timing.mockMs = mark() - mockStart;
+    timing.totalMainMs = mark() - totalStart;
+    return { ...mockResult, timing };
   }
 
+  const requestBuildStart = mark();
   const requestBody = {
     type: 'receipt_account_recommendation',
     fileName,
@@ -91,17 +108,22 @@ ipcMain.handle('receipt:analyze', async (_event, payload) => {
     accounts: payload.accounts || DEFAULT_ACCOUNTS,
     instruction: '영수증 이미지를 분석해서 가장 유사한 경비 정산 계정을 하나 추천하고, 이유를 한국어로 짧게 설명해줘.'
   };
+  const requestJson = JSON.stringify(requestBody);
+  timing.requestBuildMs = mark() - requestBuildStart;
 
+  const webhookStart = mark();
   const response = await fetch(endpoint, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
       ...(apiKey ? { authorization: `Bearer ${apiKey}` } : {})
     },
-    body: JSON.stringify(requestBody)
+    body: requestJson
   });
-
   const text = await response.text();
+  timing.webhookWaitMs = mark() - webhookStart;
+
+  const parseStart = mark();
   let data;
   try {
     data = JSON.parse(text);
@@ -113,7 +135,11 @@ ipcMain.handle('receipt:analyze', async (_event, payload) => {
     throw new Error(data?.error || data?.message || `Webhook 호출 실패: HTTP ${response.status}`);
   }
 
-  return normalizeWebhookResponse(data);
+  const normalized = normalizeWebhookResponse(data);
+  timing.responseParseMs = mark() - parseStart;
+  timing.totalMainMs = mark() - totalStart;
+
+  return { ...normalized, timing };
 });
 
 function normalizeWebhookResponse(data) {

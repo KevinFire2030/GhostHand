@@ -87,6 +87,15 @@
             <span class="result-label">분석 소요 시간</span>
             <strong id="elapsedTime">-</strong>
           </div>
+          <div class="reason-card">
+            <span class="result-label">단계별 소요 시간</span>
+            <ul id="timingBreakdown" class="timing-list">
+              <li>파일 읽기 시간: -</li>
+              <li>base64 변환 시간: -</li>
+              <li>webhook 대기 시간: -</li>
+              <li>응답 파싱 시간: -</li>
+            </ul>
+          </div>
           <details class="raw-response">
             <summary>Raw response</summary>
             <pre id="rawResponse">{}</pre>

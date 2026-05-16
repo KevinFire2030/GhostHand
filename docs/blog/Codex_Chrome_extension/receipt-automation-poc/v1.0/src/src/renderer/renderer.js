@@ -18,6 +18,7 @@ const connectionStatus = $('connectionStatus');
 const recommendedAccount = $('recommendedAccount');
 const reasonText = $('reasonText');
 const elapsedTime = $('elapsedTime');
+const timingBreakdown = $('timingBreakdown');
 const rawResponse = $('rawResponse');
 const flowItems = Array.from(document.querySelectorAll('#flowList li'));
 
@@ -51,6 +52,7 @@ selectButton.addEventListener('click', async () => {
     recommendedAccount.textContent = '-';
     reasonText.textContent = '분석 요청 전입니다.';
     elapsedTime.textContent = '-';
+    setTimingBreakdown();
     rawResponse.textContent = '{}';
     setFlow(1);
     setLog(`이미지 선택 완료\n${file.name}\n\n이제 OpenClaw로 분석 요청을 보낼 수 있습니다.`);
@@ -67,6 +69,7 @@ analyzeButton.addEventListener('click', async () => {
   const startedAt = performance.now();
   const startedAtDate = new Date();
   elapsedTime.textContent = '측정 중...';
+  setTimingBreakdown({ status: '측정 중...' });
   connectionStatus.textContent = endpointInput.value.trim() ? '웹훅 호출 중' : '데모 mock 분석 중';
   setFlow(2);
   setLog('이미지를 base64로 변환하고 분석 요청을 준비합니다...');
@@ -92,18 +95,21 @@ analyzeButton.addEventListener('click', async () => {
     recommendedAccount.textContent = result.account || '-';
     reasonText.textContent = result.reason || '이유 없음';
     elapsedTime.textContent = formatElapsedTime(elapsedMs);
+    setTimingBreakdown(result.timing);
     rawResponse.textContent = JSON.stringify({
       ...(result.raw || result),
+      timing: result.timing || null,
       clientTiming: {
         requestedAt: startedAtDate.toISOString(),
         completedAt: completedAtDate.toISOString(),
         elapsedMs: Math.round(elapsedMs)
       }
     }, null, 2);
-    setLog(`추천 결과 수신 완료\n추천 계정: ${result.account}\n신뢰도: ${result.confidence ?? '-'}\n분석 소요 시간: ${formatElapsedTime(elapsedMs)}`);
+    setLog(`추천 결과 수신 완료\n추천 계정: ${result.account}\n신뢰도: ${result.confidence ?? '-'}\n분석 소요 시간: ${formatElapsedTime(elapsedMs)}\nwebhook 대기 시간: ${formatElapsedTime(result.timing?.webhookWaitMs)}`);
   } catch (error) {
     const failedAt = performance.now();
     elapsedTime.textContent = formatElapsedTime(failedAt - startedAt);
+    setTimingBreakdown({ status: '오류 발생' });
     connectionStatus.textContent = '오류 발생';
     setError(error);
   } finally {
@@ -126,6 +132,27 @@ function setError(error) {
   const message = error?.message || String(error);
   logBox.textContent = `오류: ${message}`;
   rawResponse.textContent = JSON.stringify({ error: message }, null, 2);
+}
+
+function setTimingBreakdown(timing = {}) {
+  if (timing.status) {
+    timingBreakdown.innerHTML = `
+      <li>파일 읽기 시간: ${timing.status}</li>
+      <li>base64 변환 시간: ${timing.status}</li>
+      <li>webhook 대기 시간: ${timing.status}</li>
+      <li>응답 파싱 시간: ${timing.status}</li>
+    `;
+    return;
+  }
+
+  timingBreakdown.innerHTML = `
+    <li>파일 읽기 시간: <strong>${formatElapsedTime(timing.fileReadMs)}</strong></li>
+    <li>base64 변환 시간: <strong>${formatElapsedTime(timing.base64Ms)}</strong></li>
+    <li>요청 JSON 생성 시간: <strong>${formatElapsedTime(timing.requestBuildMs)}</strong></li>
+    <li>webhook 대기 시간: <strong>${formatElapsedTime(timing.webhookWaitMs)}</strong></li>
+    <li>응답 파싱 시간: <strong>${formatElapsedTime(timing.responseParseMs)}</strong></li>
+    <li>메인 프로세스 총 시간: <strong>${formatElapsedTime(timing.totalMainMs)}</strong></li>
+  `;
 }
 
 function formatBytes(bytes) {
