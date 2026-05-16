@@ -1,0 +1,19 @@
+﻿{
+  "id": "receipt-poc-webhook",
+  "name": "Receipt PoC Webhook",
+  "description": "Synchronous receipt account recommendation endpoint for the Electron PoC.",
+  "activation": { "onStartup": true },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "token": { "type": "string" },
+      "routePath": { "type": "string" },
+      "model": { "type": "string" },
+      "openaiEnvPath": { "type": "string" },
+      "fastTimeoutMs": { "type": "integer", "minimum": 1000 },
+      "imageDetail": { "type": "string", "enum": ["low", "high", "auto"] },
+      "timeoutMs": { "type": "integer", "minimum": 1000 }
+    }
+  }
+}
