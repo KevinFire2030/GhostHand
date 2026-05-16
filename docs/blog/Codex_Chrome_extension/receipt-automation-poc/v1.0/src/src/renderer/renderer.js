@@ -17,6 +17,7 @@ const logBox = $('logBox');
 const connectionStatus = $('connectionStatus');
 const recommendedAccount = $('recommendedAccount');
 const reasonText = $('reasonText');
+const elapsedTime = $('elapsedTime');
 const rawResponse = $('rawResponse');
 const flowItems = Array.from(document.querySelectorAll('#flowList li'));
 
@@ -49,6 +50,7 @@ selectButton.addEventListener('click', async () => {
     analyzeButton.disabled = false;
     recommendedAccount.textContent = '-';
     reasonText.textContent = '분석 요청 전입니다.';
+    elapsedTime.textContent = '-';
     rawResponse.textContent = '{}';
     setFlow(1);
     setLog(`이미지 선택 완료\n${file.name}\n\n이제 OpenClaw로 분석 요청을 보낼 수 있습니다.`);
@@ -62,6 +64,9 @@ analyzeButton.addEventListener('click', async () => {
 
   analyzeButton.disabled = true;
   selectButton.disabled = true;
+  const startedAt = performance.now();
+  const startedAtDate = new Date();
+  elapsedTime.textContent = '측정 중...';
   connectionStatus.textContent = endpointInput.value.trim() ? '웹훅 호출 중' : '데모 mock 분석 중';
   setFlow(2);
   setLog('이미지를 base64로 변환하고 분석 요청을 준비합니다...');
@@ -78,13 +83,27 @@ analyzeButton.addEventListener('click', async () => {
       accounts: state.accounts
     });
 
+    const completedAt = performance.now();
+    const completedAtDate = new Date();
+    const elapsedMs = completedAt - startedAt;
+
     setFlow(4);
     connectionStatus.textContent = '분석 완료';
     recommendedAccount.textContent = result.account || '-';
     reasonText.textContent = result.reason || '이유 없음';
-    rawResponse.textContent = JSON.stringify(result.raw || result, null, 2);
-    setLog(`추천 결과 수신 완료\n추천 계정: ${result.account}\n신뢰도: ${result.confidence ?? '-'}`);
+    elapsedTime.textContent = formatElapsedTime(elapsedMs);
+    rawResponse.textContent = JSON.stringify({
+      ...(result.raw || result),
+      clientTiming: {
+        requestedAt: startedAtDate.toISOString(),
+        completedAt: completedAtDate.toISOString(),
+        elapsedMs: Math.round(elapsedMs)
+      }
+    }, null, 2);
+    setLog(`추천 결과 수신 완료\n추천 계정: ${result.account}\n신뢰도: ${result.confidence ?? '-'}\n분석 소요 시간: ${formatElapsedTime(elapsedMs)}`);
   } catch (error) {
+    const failedAt = performance.now();
+    elapsedTime.textContent = formatElapsedTime(failedAt - startedAt);
     connectionStatus.textContent = '오류 발생';
     setError(error);
   } finally {
@@ -114,4 +133,10 @@ function formatBytes(bytes) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function formatElapsedTime(ms) {
+  if (!Number.isFinite(ms)) return '-';
+  if (ms < 1000) return `${Math.round(ms)} ms`;
+  return `${(ms / 1000).toFixed(2)}초`;
 }

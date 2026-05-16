@@ -120,6 +120,13 @@ function normalizeWebhookResponse(data) {
   // OpenClaw webhook/agent 응답 형태가 달라도 데모 UI가 깨지지 않도록 주요 필드를 흡수한다.
   // 단, top-level에 명시적인 결과가 있으면 nested result/message보다 우선한다.
   const candidates = [
+    // OpenClaw image.describe는 실제 모델 JSON을 rawModelText.outputs[0].text에 담아줄 수 있다.
+    // 이 값이 있으면 wrapper의 account/recommendedAccount보다 우선한다.
+    extractImageDescribePayload(data?.rawModelText),
+    extractImageDescribePayload(data?.reason),
+    extractImageDescribePayload(data?.result),
+    extractImageDescribePayload(data?.data),
+    extractImageDescribePayload(data?.response),
     data,
     parseJsonIfPossible(data?.result),
     parseJsonIfPossible(data?.data),
@@ -163,6 +170,17 @@ function parseJsonIfPossible(value) {
   } catch {
     return value;
   }
+}
+
+function extractImageDescribePayload(value) {
+  const parsed = parseJsonIfPossible(value);
+  if (!parsed || typeof parsed !== 'object') return null;
+
+  const outputText = parsed?.outputs?.find((output) => typeof output?.text === 'string')?.text;
+  const outputPayload = parseJsonIfPossible(outputText);
+  if (outputPayload && typeof outputPayload === 'object') return outputPayload;
+
+  return parsed;
 }
 
 async function loadLocalEnv() {
