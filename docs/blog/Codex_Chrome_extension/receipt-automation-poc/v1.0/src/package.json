@@ -1,0 +1,48 @@
+{
+  "name": "receipt-automation-poc",
+  "version": "1.0.0",
+  "description": "Electron PoC demo for receipt image analysis via OpenClaw webhook.",
+  "main": "src/main.js",
+  "author": "GhostHand",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "ai.openclaw.receiptAutomationPoc",
+    "productName": "Receipt Automation PoC",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "receipt-automation-poc-setup.${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}

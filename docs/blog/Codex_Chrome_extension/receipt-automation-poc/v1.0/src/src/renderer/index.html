@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: data:; style-src 'self'; script-src 'self'; connect-src *;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt Automation PoC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">OpenClaw × Electron PoC</p>
+          <h1>영수증 자동 정산 계정 추천</h1>
+          <p class="subtitle">영수증 이미지를 업로드하면 OpenClaw 웹훅으로 분석 요청을 보내고 추천 계정과 이유를 표시합니다.</p>
+        </div>
+        <div class="status-pill" id="connectionStatus">데모 준비</div>
+      </header>
+
+      <section class="config-card">
+        <label>
+          OpenClaw Webhook Endpoint
+          <input id="endpointInput" type="url" placeholder="예: https://gateway.example.com/webhook/receipt-account" />
+        </label>
+        <label>
+          API Key / Token <span>(선택)</span>
+          <input id="apiKeyInput" type="password" placeholder="Bearer token이 필요한 경우 입력" />
+        </label>
+      </section>
+
+      <section class="pipeline-grid">
+        <article class="panel input-panel">
+          <div class="panel-header">
+            <span class="step">1</span>
+            <div>
+              <h2>입력</h2>
+              <p>영수증 이미지 선택</p>
+            </div>
+          </div>
+          <button id="selectButton" class="primary-button">파일 선택</button>
+          <div class="receipt-preview" id="previewBox">
+            <span>선택된 이미지 없음</span>
+          </div>
+          <dl class="meta-list">
+            <div><dt>파일명</dt><dd id="fileName">-</dd></div>
+            <div><dt>크기</dt><dd id="fileSize">-</dd></div>
+            <div><dt>형식</dt><dd id="mimeType">-</dd></div>
+          </dl>
+        </article>
+
+        <article class="panel process-panel">
+          <div class="panel-header">
+            <span class="step">2</span>
+            <div>
+              <h2>처리</h2>
+              <p>Electron → API 호출 → OpenClaw 웹훅 → 스킬</p>
+            </div>
+          </div>
+          <ol class="flow-list" id="flowList">
+            <li class="done">이미지 대기</li>
+            <li>base64 변환</li>
+            <li>웹훅 호출</li>
+            <li>계정 추천 수신</li>
+          </ol>
+          <button id="analyzeButton" class="accent-button" disabled>OpenClaw로 분석 요청</button>
+          <div class="log-box" id="logBox">준비 완료. 웹훅 URL을 비워두면 데모 mock으로 동작합니다.</div>
+        </article>
+
+        <article class="panel output-panel">
+          <div class="panel-header">
+            <span class="step">3</span>
+            <div>
+              <h2>출력</h2>
+              <p>추천 정산 계정과 이유</p>
+            </div>
+          </div>
+          <div class="result-card">
+            <span class="result-label">추천 정산 계정</span>
+            <strong id="recommendedAccount">-</strong>
+          </div>
+          <div class="reason-card">
+            <span class="result-label">추천 이유</span>
+            <p id="reasonText">아직 분석 결과가 없습니다.</p>
+          </div>
+          <details class="raw-response">
+            <summary>Raw response</summary>
+            <pre id="rawResponse">{}</pre>
+          </details>
+        </article>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
