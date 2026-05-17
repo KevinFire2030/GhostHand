@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt Auto Account PoC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Hermes Webhook Demo</p>
+          <h1>영수증 업로드 → AI 계정 추천</h1>
+          <p class="hero-copy">샘플 영수증이나 직접 선택한 이미지를 WSL의 <code>webhook_test.py</code>로 보내고, 추천 계정과 추천 이유를 카드로 보여주는 Electron PoC입니다.</p>
+        </div>
+        <div id="envBadge" class="env-badge">환경 확인 중...</div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel upload-panel">
+          <h2>1. 영수증 선택</h2>
+          <button id="pickButton" class="primary-button">이미지 파일 선택</button>
+          <div id="dropZone" class="drop-zone">
+            <strong>영수증 이미지를 여기에 드래그</strong>
+            <span>PNG, JPG, WEBP 지원</span>
+          </div>
+
+          <h3>샘플 영수증</h3>
+          <div id="sampleList" class="sample-list"></div>
+        </aside>
+
+        <section class="panel preview-panel">
+          <h2>2. 미리보기</h2>
+          <div class="preview-box">
+            <img id="previewImage" alt="선택한 영수증 미리보기" />
+            <p id="emptyPreview">아직 선택한 영수증이 없습니다.</p>
+          </div>
+          <p id="selectedPath" class="path-text">선택 경로: 없음</p>
+          <button id="analyzeButton" class="analyze-button" disabled>웹훅 호출하고 분석하기</button>
+        </section>
+
+        <section class="panel result-panel">
+          <h2>3. 추천 결과</h2>
+          <div id="statusBox" class="status-box idle">대기 중</div>
+
+          <div class="result-grid">
+            <div class="result-card highlight">
+              <span>추천 계정</span>
+              <strong id="accountValue">-</strong>
+            </div>
+            <div class="result-card">
+              <span>걸린 시간</span>
+              <strong id="elapsedValue">-</strong>
+            </div>
+            <div class="result-card">
+              <span>가맹점</span>
+              <strong id="merchantValue">-</strong>
+            </div>
+            <div class="result-card">
+              <span>금액</span>
+              <strong id="amountValue">-</strong>
+            </div>
+          </div>
+
+          <div class="reason-box">
+            <span>추천 이유</span>
+            <p id="reasonValue">분석 후 표시됩니다.</p>
+          </div>
+
+          <details class="raw-box">
+            <summary>전체 JSON / 로그 보기</summary>
+            <pre id="jsonValue">{}</pre>
+            <pre id="logValue"></pre>
+          </details>
+        </section>
+      </section>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

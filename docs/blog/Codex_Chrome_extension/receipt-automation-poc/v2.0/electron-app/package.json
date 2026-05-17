@@ -1,0 +1,15 @@
+{
+  "name": "receipt-auto-account-demo",
+  "version": "0.1.0",
+  "description": "Electron PoC demo for receipt upload and expense account recommendation via Hermes webhook.",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/parseWebhookOutput.test.js",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/renderer.js && node --check src/lib/parseWebhookOutput.js"
+  },
+  "devDependencies": {
+    "electron": "^42.1.0"
+  }
+}
