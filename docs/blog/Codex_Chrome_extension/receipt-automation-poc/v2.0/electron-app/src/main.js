@@ -57,7 +57,10 @@ function runCommand(command, args, options = {}) {
 
 async function toWslPath(filePath) {
   if (process.platform !== 'win32') return filePath;
-  const { stdout } = await runCommand('wsl.exe', ['wslpath', '-a', filePath]);
+  // wsl.exe can treat Windows backslashes as escape characters before wslpath sees them.
+  // Passing E:/... keeps the drive letter while avoiding backslash loss such as E:axPRJs...
+  const safeWindowsPath = filePath.replace(/\\/g, '/');
+  const { stdout } = await runCommand('wsl.exe', ['wslpath', '-a', safeWindowsPath]);
   return stdout.trim().replace(/\r/g, '');
 }
 
