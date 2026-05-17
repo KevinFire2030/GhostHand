@@ -1,0 +1,11 @@
+file=receipt_08_delivery_overtime.png
+merchant=배달의민족 역삼분식
+business_registration_number=301-22-33445
+transaction_datetime=2026-05-21 21:38:42
+approval_number=76104489
+card=우리카드
+total_amount=44700
+supply_amount=40636
+tax_amount=4064
+account_hint=복리후생비
+items=김밥 x6 @4200; 라면 x3 @5500; 배달팁 x1 @3000

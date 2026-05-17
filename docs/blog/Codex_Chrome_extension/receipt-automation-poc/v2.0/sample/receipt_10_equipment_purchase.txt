@@ -1,0 +1,11 @@
+file=receipt_10_equipment_purchase.png
+merchant=하이마트 잠실점
+business_registration_number=215-85-67812
+transaction_datetime=2026-05-22 15:27:09
+approval_number=10293847
+card=카카오뱅크카드
+total_amount=163000
+supply_amount=148182
+tax_amount=14818
+account_hint=비품구매
+items=무선 키보드 x1 @79000; 무선 마우스 x1 @39000; USB-C 허브 x1 @45000

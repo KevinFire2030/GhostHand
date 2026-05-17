@@ -1,0 +1,11 @@
+file=receipt_07_software_subscription.png
+merchant=Notion Labs Korea
+business_registration_number=581-88-01010
+transaction_datetime=2026-05-21 09:10:00
+approval_number=34810922
+card=비씨카드
+total_amount=60000
+supply_amount=54545
+tax_amount=5455
+account_hint=지급수수료
+items=Team Plan Monthly x5 @12000

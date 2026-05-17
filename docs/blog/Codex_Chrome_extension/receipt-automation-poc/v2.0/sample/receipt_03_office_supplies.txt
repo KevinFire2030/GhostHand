@@ -1,0 +1,11 @@
+file=receipt_03_office_supplies.png
+merchant=오피스디포 선릉점
+business_registration_number=220-86-13579
+transaction_datetime=2026-05-18 11:12:44
+approval_number=19028463
+card=KB국민카드
+total_amount=40500
+supply_amount=36818
+tax_amount=3682
+account_hint=소모품비
+items=A4 복사용지 2박스 x1 @24000; 볼펜 세트 x3 @3500; 클리어파일 x5 @1200
