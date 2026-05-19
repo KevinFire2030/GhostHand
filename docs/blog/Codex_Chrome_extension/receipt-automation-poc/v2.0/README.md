@@ -28,3 +28,6 @@
 ## 상태
 
 초기 작업 공간 생성 단계입니다.
+
+
+<img width="1527" height="1317" alt="image" src="https://github.com/user-attachments/assets/685ec1f7-1d98-4435-8918-d87cc7897a8c" />
